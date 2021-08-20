@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+.app{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.sound-picker , .time-select,.player-container{
+    height: 80%;
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.player-container{
+    position: relative;
+
+}
+.player-container svg{
+    position:  absolute;
+    height: 50%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+
+}
+
+
+
+.video-container{
+    position:fixed;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    z-index: -10;    
+}
+
+.time-display{
+    position: absolute;
+    bottom: 10%;
+    font-size: 50px;
+    color:wheat;
+}
+
+.time-select button,
+.sound-picker button {
+    color:white;
+    width: 30%;
+    height:10%;
+    background: none;
+    border: 2px solid;
+    font-size: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+.time-select button:hover{
+    background: white;
+    color:black;
+}
+
+
+.sound-picker button{
+    border:none;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    padding: 40px;
+}
+
+
+.sound-picker button:nth-child(1){
+    background: #4863A0;
+}
+
+.sound-picker button:nth-child(2){
+    background: #C35817;
+}
+
+.sound-picker button img{
+    height: 100%;
+}
